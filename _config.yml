@@ -5,7 +5,7 @@ permalink:           pretty
 title:               Charlie Yaris
 tagline:             Data Scientist at Metis
 url:                 http://cyaris.github.io
-paginate:            2
+paginate:            1
 baseurl:             ""
 
 # Assets
@@ -35,4 +35,6 @@ gems:
 pages_list:
   About: '/about'
   Archive: '/archive'
+  Contact: '/contact'
   Feed: '/index.html'
+  Home: '/home'
