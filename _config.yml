@@ -35,5 +35,5 @@ gems:
 pages_list:
   Home: '/index.html'
   Archive: '/archive'
-  Feed: '/feed.html'
+  Feed: '/feed'
   Contact: '/contact'
