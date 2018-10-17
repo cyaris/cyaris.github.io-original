@@ -6,7 +6,7 @@ title:               Charlie Yaris
 tagline:             Data Scientist at Metis
 url:                 http://cyaris.github.io
 paginate:            1
-baseurl:             "/home/"
+baseurl:             ""
 
 # Assets
 #
