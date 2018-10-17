@@ -33,7 +33,7 @@ gems:
 
 # Page List
 pages_list:
-  Home: 'home'
+  Home: 'index.html'
   Archive: '/archive'
-  Feed: '/index.html'
+  Feed: '/feed.html'
   Contact: '/contact'
