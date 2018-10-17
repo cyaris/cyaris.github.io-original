@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Home
+title: Feed
 ---
 
 <div class="posts">
