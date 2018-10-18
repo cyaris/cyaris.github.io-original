@@ -3,7 +3,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>
-    {% if page.title == "Feed" or page.title == "Posts" %}
+    {% if page.title == "Feed" %}
+      {{ site.title }} &middot; {{ site.tagline }}
+    {% if page.title == "Posts" %}
       {{ site.title }} &middot; {{ site.tagline }}
     {% else %}
       {{ page.title }} &middot; {{ site.title }}
