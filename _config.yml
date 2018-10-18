@@ -34,6 +34,7 @@ gems:
 # Page List
 pages_list:
   Home: '/home'
-  Archive: '/archive'
+  Posts: '/posts'
   Feed: '/index.html'
+  Mastermind: '/mastermind'
   Contact: '/contact'
