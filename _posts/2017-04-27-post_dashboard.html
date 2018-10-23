@@ -1,37 +1,50 @@
 {% include 2017-04-27-post.md %}
 
-<!-- <html>
-	<head> -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-		<script src="http://public.tableau.com/javascripts/api/tableau-2.0.0.min.js"></script>
-		<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" /> -->
+<html>
+	<head>
+		<script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js'></script>
+		<script src='http://public.tableau.com/javascripts/api/tableau-2.0.0.min.js'></script>
+		<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' />
 		<script>
 			/**
 			 * Instantiate our vizualization.
 			 */
+
 			$(function() {
 				var url  = 'https://public.tableau.com/views/TrafficViolationsinMaryland/Question?/Splash';
 				var size = findDashboardSize();
 				var vizOptions = {
 					showTabs           : true,
+					// hideTabs           : true,
 					hideToolbar        : true,
-					width              : size.width + "px",
-					height             : size.height + "px",
+					width              : size.width + 'px',
+					height             : size.height + 'px',
 					onFirstInteractive : function (e) {
-						$('.viz iframe').attr("scrolling","no");
-						$('.viz iframe').css('overflow', 'hidden');
+						$('.viz iframe').attr('scrolling', 'no');
+						$('.viz iframe').css('overflowy', 'visible');
+						$('.viz iframe').css('overflowx', 'visible');
 					}
 				};
-
-				new tableauSoftware.Viz(document.getElementById('viz'), url, vizOptions)
+				var viz = new tableauSoftware.Viz(document.getElementById('viz'), url, vizOptions);
+				viz.addEventListener(tableau.TableauEventName.TAB_SWITCH, function resize_again() {
+						console.log('again')
+						var size = findDashboardSize();
+						$('#viz').width(size.width);
+						$('#viz').height(size.height);
+						$('#viz iframe').attr('scrolling', 'no');
+						$('#viz iframe').css('overflowx', 'visible');
+						$('#viz iframe').css('overflowy', 'visible');
+						$('#viz iframe').width(size.width);
+						$('#viz iframe').height(size.height + 20);
+						});
 			});
 
 			/**
 			 * Finds the correct size of the dashboard in this screen.
 			 */
 			function findDashboardSize() {
-				var minHeight = 630;
-				var maxHeight = 885;
+				var minHeight = 800;
+				var maxHeight = 1100;
 				var minWidth  = 1000;
 
 				// The minus 100px leaves us room for the header/footer. Adjust as needed.
@@ -58,8 +71,9 @@
 				var size = findDashboardSize();
 				$('#viz').width(size.width);
 				$('#viz').height(size.height);
-				$('#viz iframe').attr("scrolling","no");
-				$('#viz iframe').css('overflow', 'hidden');
+				$('#viz iframe').attr('scrolling', 'no');
+				$('#viz iframe').css('overflowx', 'visible');
+				$('#viz iframe').css('overflowy', 'visible');
 				$('#viz iframe').width(size.width);
 				$('#viz iframe').height(size.height + 20);
 			}
@@ -68,9 +82,10 @@
 			 * Hook into the window resize event to resize when the user resizes the screen.
 			 */
 			$(window).resize(resize);
+
 		</script>
-	<!-- </head> -->
-	<!-- <body> -->
-		<!-- <div id="viz"></div> -->
-	<!-- </body> -->
-<!-- </html> -->
+	</head>
+	<body>
+	<div id='viz'></div>
+	</body>
+</html>
