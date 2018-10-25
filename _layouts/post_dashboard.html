@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 ---
 
 {% if post.dashabord %}
@@ -10,7 +10,7 @@ layout: default
 	 */
 
 	$(function() {
-		var url  = page.dashboard;
+		var url  = post.dashboard;
 		var size = findDashboardSize();
 		var vizOptions = {
 			showTabs           : true,
