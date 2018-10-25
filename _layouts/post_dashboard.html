@@ -1,3 +1,9 @@
+---
+layout: default
+---
+
+{% if page.dashabord %}
+
 <html>
 	<head>
 		<script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js'></script>
@@ -9,7 +15,7 @@
 			 */
 
 			$(function() {
-				var url  = 'https://public.tableau.com/views/TrafficViolationsinMaryland/Question?/Splash';
+				var url  = page.dashboard;
 				var size = findDashboardSize();
 				var vizOptions = {
 					showTabs           : true,
@@ -87,3 +93,4 @@
 	<div id='viz'></div>
 	</body>
 </html>
+{% endif %}
