@@ -5,10 +5,10 @@
     Takes page.custom-css-list varialbe and renders link tag for each item in it.
 {% endcomment %}
 
-{% for javascript in page.dashboard %}
+{% for javascript in post.dashboard %}
     <script src="{{ javascript }}"></script>
 {% endfor %}
 
-{% for css in page.dashboard %}
+{% for css in post.dashboard %}
     <link href="{{ css }}" rel="stylesheet">
 {% endfor %}
