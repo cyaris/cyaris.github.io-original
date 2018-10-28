@@ -8,9 +8,24 @@
       {{ page.title }} &middot; {{ site.title }}
     {% endif %}
   </title>
+
+  {% highlight html %}
+  {% raw %}
+
+  {% for javascript in page.custom-javascript-list %}
+      <script src="{{ javascript }}"></script>
+  {% endfor %}
+
+  {% for css in page.custom-css-list %}
+      <link href="{{ css }}" rel="stylesheet">
+  {% endfor %}
+
+  {% endraw %}
+  {% endhighlight %}
+  
   <link rel="stylesheet" href="{{ site.baseurl }}/styles.css">
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.baseurl }}/public/apple-touch-icon-precomposed.png">
   <link rel="shortcut icon" href="{{ site.baseurl }}/public/favicon.ico">
   <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ site.baseurl }}/atom.xml">
-  {% include custom-scripts.html %}
+  <!-- {% include custom-scripts.html %} -->
 </head>
