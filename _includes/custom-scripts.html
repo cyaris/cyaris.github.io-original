@@ -1,7 +1,7 @@
-{% for javascript in post.dashboard %}
+{% for javascript in post.custom-javascript-list %}
     <script src="{{ javascript }}"></script>
 {% endfor %}
 
-{% for css in post.dashboard %}
+{% for css in post.custom-css-list %}
     <link href="{{ css }}" rel="stylesheet">
 {% endfor %}
