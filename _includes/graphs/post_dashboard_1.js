@@ -35,11 +35,11 @@
    */
   function findDashboardSize() {
     var minHeight = 800;
-    var maxHeight = 1100;
+    var maxHeight = 900;
     var minWidth  = 1000;
 
     // The minus 100px leaves us room for the header/footer. Adjust as needed.
-    var height = $('body').height();
+    var height = $('body').height() - 100;
 
     if (height < minHeight) {
       height = minHeight;
