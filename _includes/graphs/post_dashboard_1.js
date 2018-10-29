@@ -7,8 +7,6 @@
     var size = findDashboardSize();
     var vizOptions = {
       showTabs           : true,
-      // hideTabs           : true,
-      scrolling					 : false,
       hideToolbar        : true,
       width              : size.width + 'px',
       height             : size.height + 'px',
@@ -41,7 +39,7 @@
     var minWidth  = 1000;
 
     // The minus 100px leaves us room for the header/footer. Adjust as needed.
-    var height = $('body').height() - 100;
+    var height = $('body').height();
 
     if (height < minHeight) {
       height = minHeight;

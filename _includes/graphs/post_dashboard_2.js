@@ -7,8 +7,6 @@
     var size = findDashboardSize();
     var vizOptions = {
       showTabs           : true,
-      // hideTabs           : true,
-      scrolling					 : false,
       hideToolbar        : true,
       width              : size.width + 'px',
       height             : size.height + 'px',
