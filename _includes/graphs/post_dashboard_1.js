@@ -3,7 +3,7 @@
    */
 
   $(function() {
-    var url  = page.dashboard;
+    var url  = 'https://public.tableau.com/views/TrafficViolationsinMaryland/Question?/Splash'
     var size = findDashboardSize();
     var vizOptions = {
       showTabs           : true,
