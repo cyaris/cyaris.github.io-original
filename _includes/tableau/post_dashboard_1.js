@@ -12,8 +12,8 @@
       height             : size.height + 'px',
       onFirstVizSizeKnown : function (e) {
         $('.viz iframe').attr('scrolling', 'no');
-				$('.viz iframe').css('overflowy', 'visible');
-				$('.viz iframe').css('overflowx', 'visible');
+				// $('.viz iframe').css('overflowy', 'visible');
+				// $('.viz iframe').css('overflowx', 'visible');
       },
       onFirstInteractive : function (e) {
         $('.viz iframe').attr('scrolling', 'no');
