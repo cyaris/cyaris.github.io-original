@@ -10,6 +10,9 @@ layout: default
       {% include {{ js }} %}
     </script>
   {% endfor %}
+  {% if page.jsarr %}
+  <div id="viz"></div>
+  {% endif %}
   {{ content }}
 </article>
 
