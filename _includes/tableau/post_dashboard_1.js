@@ -10,10 +10,15 @@
       hideToolbar        : true,
       width              : size.width + 'px',
       height             : size.height + 'px',
+      onFirstVizSizeKnown : function (e) {
+        $('.viz iframe').attr('scrolling', 'no');
+				$('.viz iframe').css('overflowy', 'visible');
+				$('.viz iframe').css('overflowx', 'visible');
+      },
       onFirstInteractive : function (e) {
         $('.viz iframe').attr('scrolling', 'no');
-        $('.viz iframe').css('overflowy', 'visible');
-        $('.viz iframe').css('overflowx', 'visible');
+				// $('.viz iframe').css('overflowy', 'visible');
+				// $('.viz iframe').css('overflowx', 'visible');
       }
     };
     var viz = new tableauSoftware.Viz(document.getElementById('viz'), url, vizOptions);
@@ -23,8 +28,8 @@
         $('#viz').width(size.width);
         $('#viz').height(size.height);
         $('#viz iframe').attr('scrolling', 'no');
-        $('#viz iframe').css('overflowx', 'visible');
-        $('#viz iframe').css('overflowy', 'visible');
+        // $('#viz iframe').css('overflowx', 'visible');
+        // $('#viz iframe').css('overflowy', 'visible');
         $('#viz iframe').width(size.width);
         $('#viz iframe').height(size.height + 20);
         });
@@ -63,8 +68,8 @@
     $('#viz').width(size.width);
     $('#viz').height(size.height);
     $('#viz iframe').attr('scrolling', 'no');
-    $('#viz iframe').css('overflowx', 'visible');
-    $('#viz iframe').css('overflowy', 'visible');
+  	// $('#viz iframe').css('overflowx', 'visible');
+  	// $('#viz iframe').css('overflowy', 'visible');
     $('#viz iframe').width(size.width);
     $('#viz iframe').height(size.height + 20);
   }
