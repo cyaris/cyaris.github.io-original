@@ -11,11 +11,13 @@
       width              : size.width + 'px',
       height             : size.height + 'px',
       onFirstInteractive : function (e) {
-        $('.viz iframe').attr('scrolling', 'no');
-        $('.viz iframe').width(size.width);
-        $('.viz iframe').height(size.height + 20);
-				// $('.viz iframe').css('overflowy', 'visible');
-				// $('.viz iframe').css('overflowx', 'visible');
+        $('#viz').width(size.width);
+        $('#viz').height(size.height);
+        $('#viz iframe').attr('scrolling', 'no');
+        // $('#viz iframe').css('overflowx', 'visible');
+        // $('#viz iframe').css('overflowy', 'visible');
+        $('#viz iframe').width(size.width);
+        $('#viz iframe').height(size.height + 20);
       }
     };
     var viz = new tableauSoftware.Viz(document.getElementById('viz'), url, vizOptions);
