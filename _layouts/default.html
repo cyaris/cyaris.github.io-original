@@ -14,16 +14,6 @@
         </h3>
       </header>
       <main>
-      {% for js in page.jsarr %}
-        <script type="text/javascript">
-          {% include {{ js }} %}
-        </script>
-      {% endfor %}
-      {% if page.jsarr %}
-      <body>
-    		<div id="viz"></div>
-    	</body>
-      {% endif %}
       {{ content }}
       </main>
       <footer class="footer">
