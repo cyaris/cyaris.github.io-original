@@ -20,15 +20,6 @@
        }
      };
      var viz = new tableauSoftware.Viz(document.getElementById('viz'), url, vizOptions);
-     viz.addEventListener(tableau.TableauEventName.TAB_SWITCH, function resize_again() {
-         console.log('again')
-         var size = findDashboardSize();
-         $('#viz iframe').attr('scrolling', 'no');
-         // $('#viz iframe').css('overflowx', 'visible');
-         // $('#viz iframe').css('overflowy', 'visible');
-         $('#viz iframe').width(size.width);
-         $('#viz iframe').height(size.height + 20);
-         });
    });
 
    /**
