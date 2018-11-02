@@ -12,14 +12,6 @@ title: Feed
       </a>
     </h1>
     <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date_to_string }}</time>
-    {% for js in post.jsarr %}
-      <script type="text/javascript">
-        {% include {{ js }} %}
-      </script>
-    {% endfor %}
-    {% if post.jsarr %}
-    <div id="viz"></div>
-    {% endif %}
     {{ post.content }}
   </article>
   {% endfor %}
