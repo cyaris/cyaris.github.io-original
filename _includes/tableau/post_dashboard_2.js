@@ -3,7 +3,7 @@
    */
 
   $(function() {
-    var url  = 'https://public.tableau.com/views/CookCountySentencingAllTabs/Sheet2/Splash'
+    var url  = 'https://public.tableau.com/views/CourtSentencinginCookCountyIL/Question?/Splash'
     var size = findDashboardSize();
     var vizOptions = {
       showTabs           : true,
