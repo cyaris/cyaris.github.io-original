@@ -41,7 +41,7 @@
    var minWidth  = 1000;
 
    // The minus 100px leaves us room for the header/footer. Adjust as needed.
-   var height = $('container').height() - 100;
+   var height = $('body').height() - 100;
 
    if (height < minHeight) {
      height = minHeight;
