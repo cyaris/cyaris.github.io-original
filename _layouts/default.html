@@ -13,16 +13,18 @@
           {% endfor %}
         </h3>
       </header>
-      <main>
       {% for js in page.jsarr %}
+    	<head>
         <script type="text/javascript">
-          {% include {{ js }} %}
+        {% include {{ js }} %}
         </script>
+      </head>
       {% endfor %}
       {% if page.jsarr %}
       <body>
     		<div id="viz"></div>
     	</body>
+      <main>
       {{ content }}
       </main>
       <footer class="footer">
