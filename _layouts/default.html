@@ -14,12 +14,12 @@
         </h3>
       </header>
       <main>
-      {% for js in page.jsarr %}
+      {% for js in post.jsarr %}
         <script type="text/javascript">
           {% include {{ js }} %}
         </script>
       {% endfor %}
-      {% if page.jsarr %}
+      {% if post.jsarr %}
       <body>
     		<div id="viz"></div>
     	</body>
