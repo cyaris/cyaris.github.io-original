@@ -12,18 +12,16 @@
           <small><a href="{{ page[1]  }}">{{ page[0] }}</a></small>
           {% endfor %}
         </h3>
-      </header>
-      {% for js in page.jsarr %}
-    	<head>
+        <!-- {% for js in page.jsarr %}
         <script type="text/javascript">
         {% include {{ js }} %}
         </script>
-      </head>
-      {% endfor %}
-      {% if page.jsarr %}
-      <body>
+        {% endfor %} -->
+      </header>
+      <!-- {% if page.jsarr %} -->
+      <!-- <body>
     		<div id="viz"></div>
-    	</body>
+    	</body> -->
       <main>
       {{ content }}
       </main>
