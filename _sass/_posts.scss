@@ -4,7 +4,7 @@
 // page is wrapped in `.page` and is only used on the page layout.
 
 .page,
-.post {
+.post, #viz {
   margin-bottom: 4em;
 
   li + li {
@@ -29,14 +29,6 @@
   margin-top: -.5rem;
   margin-bottom: 1rem;
   color: #9a9a9a;
-}
-
-#viz {
-  max-width: 38rem;
-  padding-left:  1.5rem;
-  padding-right: 1.5rem;
-  margin-left:  auto;
-  margin-right: auto;
 }
 
 // Related posts
