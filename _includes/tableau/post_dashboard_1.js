@@ -6,6 +6,7 @@
        var url  = 'https://public.tableau.com/views/TrafficViolationsinMaryland/Question?/Splash'
        var size = findDashboardSize();
        var vizOptions = {
+         showShareOptions	  : true,
          showTabs           : true,
          // hideTabs           : true,
          hideToolbar        : true,
